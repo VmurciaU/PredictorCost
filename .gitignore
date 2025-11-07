@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+
+# Entornos
+.env
+venv/
+venv312/
+.venv/
+
+# Otros
+*.log
+.DS_Store

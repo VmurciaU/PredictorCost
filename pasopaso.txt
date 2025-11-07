@@ -1,0 +1,22 @@
+Crea y activa venv
+# crear (ya lo hiciste)
+python -m venv venv
+
+# si falla la activación por políticas, primero:
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+# activar
+.\venv\Scripts\Activate.ps1
+
+pip install fastapi uvicorn[standard] pydantic joblib scikit-learn python-dotenv
+
+deactivate
+
+py -3.12 -m venv venv312
+
+.\venv312\Scripts\Activate.ps1
+
+python -m uvicorn app.main:app --host 127.0.0.1 --port 8080
+
+
+
